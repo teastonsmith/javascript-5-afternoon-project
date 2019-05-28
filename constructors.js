@@ -15,15 +15,19 @@
 */
 
 // Code here
+function CarFactory(make, model) {
+	this.make = make;
+	this.model = model;
+}
 
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
 
 function Employee(name, email, hireDate) {
-  this.name = name;
-  this.email = email;
-  this.hireDate = hireDate;
+	this.name = name;
+	this.email = email;
+	this.hireDate = hireDate;
 }
 
 // Do not edit the code above.
@@ -34,6 +38,7 @@ function Employee(name, email, hireDate) {
 */
 
 // Code here
+const bob = new Employee('Bob', 'bob@gmail.com', '01-02-98');
 
 ////////// PROBLEM 3 //////////
 
@@ -57,6 +62,15 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 */
 
 // Code here
+function Car(make, model, year) {
+	this.make = make;
+	this.model = model;
+	this.year = year;
+	this.move = 0;
+	this.moveCar = function() {
+		return (this.move += 10);
+	};
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -70,12 +84,26 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 */
 
 function Movie(name, genre, rating) {
-  this.name = name;
-  this.genre = genre;
-  this.rating = rating;
+	this.name = name;
+	this.genre = genre;
+	this.rating = rating;
 }
 
 // Code here
+
+// Movie.prototype = function changeRating(num) {
+// 	const newRating = num;
+// 	const oldRating = this.rating;
+// 	const avgRating = oldRating + newRating / 2;
+// 	return avgRating;
+// };
+
+Movie.prototype.changeRating = function() {
+	return this.rating;
+};
+
+const ToyStory = new Movie('Toy Story', 'Family', 'G');
+ToyStory.changeRating();
 
 ////////// PROBLEM 5 //////////
 
@@ -85,12 +113,56 @@ function Movie(name, genre, rating) {
 
 // Code here
 
+function User(name, age, email, savedPosts) {
+	this.name = name;
+	this.age = age;
+	this.email = email;
+	this.savedPosts = savedPosts;
+}
+
+User.prototype.addSavedPost = function(id, title, rating) {
+	const newPost = {
+		id,
+		title,
+		rating,
+	};
+	this.savedPosts.push(newPost);
+};
+
 ////////// PROBLEM 6 //////////
 
 // You will be using the constructor function you just created in problem 5.
 // Write a prototype method for the User constructor function named removeSavedPost that will take in one number parameter representing the post id. Use this id to find and remove the matching object in the savedPosts array.
 
 // Code here
+// User.prototype.removeSavedPost = function(id) {
+// 	for (let i = 0; i < this.savedPosts.length; i++) {
+// 		if (this.savedPosts[i].id === id) {
+// 			this.savedPosts.splice([i], 1);
+// 		}
+// 	}
+// 	return this.savedPosts;
+// };
+
+User.prototype.removeSavedPost = function(id) {
+  this.savedPosts = this.savedPosts.filter(post => post.id !== id)
+}
+
+// User.prototype.removeSavedPost = function(id) {
+//   const duplicate = this.savedPosts.findIndex(id)
+//   this.savedPosts.splice(duplicate, 1)
+// }
+
+// User.prototype.removeSavedPost = function(id) {
+//   const arr = this.savedPosts
+//   for(let i = 0; i < arr.length; i++) {
+
+//   }
+// }
+
+// User.prototype.removeSavedPost = function(id) {
+//   this.savedPosts.splice()
+// }
 
 ////////// PROBLEM 7 //////////
 
@@ -98,3 +170,6 @@ function Movie(name, genre, rating) {
 // Write a prototype method for the User constructor function named changePostRating that will take in two number parameters. The first will be an id (a number) and the second will be the new rating (a number). Use the id to find the matching object in the savedPosts array. Once you find the matching object, update it's rating score with the new rating parameter.
 
 // Code here
+User.prototype.changePostRating = function(id, newRating) {
+	this.savedPosts.map(e => (e.id === id ? (e.rating = newRating) : null));
+};

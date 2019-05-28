@@ -6,9 +6,9 @@ In this project, we'll provide practice JavaScript problems to help you better u
 
 ## Setup
 
-* `Fork` this repository.
-* `Clone` your fork.
-* Open `./index.html` with your browser.
+- `Fork` this repository.
+- `Clone` your fork.
+- Open `./index.html` with your browser.
 
 ## Directions
 
@@ -18,15 +18,14 @@ Complete all of the activities inside of `closures.js` and `constructors.js`. Us
 
 One of the biggest tools at the developer's disposal is the browser's built-in debugger. To use it, open `./index.html` with your browser. Another great tool for small and isolated pieces of code is <a href="http://www.pythontutor.com/visualize.html#">Python Tutor</a>. Just make sure to change the code to `JavaScript ES6`.
 
-
 ## Resources
 
 <details>
 
 <summary> <code> Closures </code> </summary>
 
-* [Closures - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
-* [3 Part Series - Closures vs. Classes/Constructors](https://medium.com/engineering-livestream/javascript-classes-vs-closures-cf6d6c1473f)
+- [Closures - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+- [3 Part Series - Closures vs. Classes/Constructors](https://medium.com/engineering-livestream/javascript-classes-vs-closures-cf6d6c1473f)
 
 </details>
 
@@ -34,10 +33,10 @@ One of the biggest tools at the developer's disposal is the browser's built-in d
 
 <summary> <code> Constructors/Prototypes </code> </summary>
 
-* [Understanding Constructor Functions](https://www.w3schools.com/js/js_object_constructors.asp)
-* [Prototype Basics](https://www.w3schools.com/js/js_object_prototypes.asp)
-* [Prototype InDepth](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-* [Factory vs. Constructor vs. Class](https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e)
+- [Understanding Constructor Functions](https://www.w3schools.com/js/js_object_constructors.asp)
+- [Prototype Basics](https://www.w3schools.com/js/js_object_prototypes.asp)
+- [Prototype InDepth](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Factory vs. Constructor vs. Class](https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e)
 
 </details>
 
